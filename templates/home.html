@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Popularity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='res.css') }}">
+</head>
+
+<body class="home">
+
+    <div class="form-card">
+        <h2>Enter YouTuber Metrics</h2>
+        <form action="/predict" method="post">
+            <input type="number" step="any" name="subscriberCount" placeholder="Subscribers Count" required>
+            <input type="number" step="any" name="viewCount" placeholder="Total Views" required>
+            <input type="number" step="any" name="videoCount" placeholder="Total Videos" required>
+            <input type="number" step="any" name="avgLikes" placeholder="Average Likes per Video" required>
+            <input type="number" step="any" name="avgComments" placeholder="Average Comments per Video" required>
+
+            <label>Channel Creation Date:</label>
+            <input type="date" name="creationDate" required>
+
+            <button type="submit">Predict Popularity ⭐</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Popularity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='res.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">YouTube Popularity Predictor</h1>
+
+        <div class="card">
+            <h2 class="heading">🎯 Predicted Popularity Score</h2>
+
+            <h1 style="color: {{ color or 'black' }}">
+                {{ emoji or '⭐' }} {{ score or 'N/A' }}
+            </h1>
+            <h3 style="color: {{ color or 'black' }}">
+                {{ rating or 'No rating available' }}
+            </h3>
+
+            <div class="metrics">
+                <p><strong>Engagement Rate:</strong> {{ engagement_rate or 'N/A' }}</p>
+                <p><strong>Post Frequency:</strong> {{ post_frequency or 'N/A' }}</p>
+                <p><strong>Account Age:</strong> {{ account_age or 'N/A' }}</p>
+            </div>
+
+            <a href="{{ url_for('home') }}" class="back-btn">🔙 Go Back</a>
+        </div>
+    </div>
+</body>
+
+</html>
